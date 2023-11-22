@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GameOverFragment"
+    android:background="@color/light_red">
+
+    <TextView
+        android:id="@+id/juegoTerminadoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/winnerText"
+        android:text="JueGo TeRMiNaDo"
+        android:fontFamily="@font/ketchum"
+        android:textSize="70dp"
+        android:gravity="center"
+        android:textColor="@color/light_orange"
+        android:padding="10dp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/winnerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pokémon ha ganado el combate"
+        android:fontFamily="@font/ketchum"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/light_orange"
+        app:layout_constraintTop_toBottomOf="@id/juegoTerminadoText"
+        app:layout_constraintBottom_toTopOf="@id/volverAJugarButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/volverAJugarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/viridian"
+        android:fontFamily="@font/ketchum"
+        android:textSize="30dp"
+        android:text="Volver a jugar"
+        android:textColor="@color/light_orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winnerText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

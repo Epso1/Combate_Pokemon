@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataRequestP2Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_orange">
+
+        <TextView
+            android:id="@+id/P2Title"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/light_orange"
+            android:fontFamily="@font/ketchum_italic"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Introduce los datos del PoKéMoN 2:"
+            android:textColor="@color/viridian"
+            android:textSize="30dp"
+
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@id/P2NameLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/P2NameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:background="@color/viridian"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/P2HPLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/P2Title">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Nombre:"
+                android:textColor="@color/light_orange"
+                android:textSize="18dp" />
+
+
+            <EditText
+                android:id="@+id/P2NameEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:hint="Introduce Nombre"
+                android:inputType="text"
+                android:maxLength="20"
+                android:padding="10dp"
+                android:textColor="@color/light_orange"
+                android:textColorHint="@color/light_red"
+                android:textSize="18dp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/P2HPLayout"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:background="@color/viridian"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/P2AtaqueLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/P2NameLayout">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="HP:"
+                android:textColor="@color/light_orange"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/P2HPEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:hint="Valor entero entre 0 y 999"
+                android:inputType="text"
+                android:maxLength="20"
+                android:padding="10dp"
+                android:textColor="@color/light_orange"
+                android:textColorHint="@color/light_red"
+                android:textSize="18dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/P2AtaqueLayout"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:background="@color/viridian"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/P1DefensaLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/P2HPLayout">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Ataque:"
+                android:textColor="@color/light_orange"
+                android:textColorHint="@color/light_red"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/P2AtaqueEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:hint="Valor entero entre 0 y 999"
+                android:inputType="text"
+                android:maxLength="20"
+                android:padding="10dp"
+                android:textColor="@color/light_orange"
+                android:textColorHint="@color/light_red"
+                android:textSize="18dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/P2DefensaLayout"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:background="@color/viridian"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/P2AtaqueEspecialLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/P2AtaqueLayout">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Defensa:"
+                android:textColor="@color/light_orange"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/P2DefensaEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:hint="Valor entero entre 0 y 999"
+                android:inputType="text"
+                android:maxLength="20"
+                android:padding="10dp"
+                android:textColor="@color/light_orange"
+                android:textColorHint="@color/light_red"
+                android:textSize="18dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/P2AtaqueEspecialLayout"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:background="@color/viridian"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/P2DefensaEspecialLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/P2DefensaLayout">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Ataque Especial:"
+                android:textColor="@color/light_orange"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/P2AtaqueEspecialEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:hint="Valor entero entre 0 y 999"
+                android:inputType="text"
+                android:maxLength="20"
+                android:padding="10dp"
+                android:textColor="@color/light_orange"
+                android:textColorHint="@color/light_red"
+                android:textSize="18dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/P2DefensaEspecialLayout"
+            android:layout_width="match_parent"
+            android:layout_height="97dp"
+            android:background="@color/viridian"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/aceptarButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/P2AtaqueEspecialLayout">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Defensa Especial:"
+                android:textColor="@color/light_orange"
+                android:textSize="18dp" />
+
+
+            <EditText
+                android:id="@+id/P2DefensaEspecialEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:hint="Valor entero entre 0 y 999"
+                android:inputType="text"
+                android:maxLength="20"
+                android:padding="10dp"
+                android:textColor="@color/light_orange"
+                android:textColorHint="@color/light_red"
+                android:textSize="18dp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Button
+            android:id="@+id/aceptarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_red"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Aceptar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/P2DefensaEspecialLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>

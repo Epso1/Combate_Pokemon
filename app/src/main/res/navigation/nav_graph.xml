@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/combatFragment"
+        android:name="com.example.combate_pokemon.CombatFragment"
+        android:label="fragment_combat"
+        tools:layout="@layout/fragment_combat" >
+        <action
+            android:id="@+id/action_combatFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/dataRequestP1Fragment"
+        android:name="com.example.combate_pokemon.DataRequestP1Fragment"
+        android:label="fragment_data_request_p1"
+        tools:layout="@layout/fragment_data_request_p1" >
+        <action
+            android:id="@+id/action_dataRequestP1Fragment_to_dataRequestP2Fragment"
+            app:destination="@id/dataRequestP2Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataRequestP2Fragment"
+        android:name="com.example.combate_pokemon.DataRequestP2Fragment"
+        android:label="fragment_data_request_p2"
+        tools:layout="@layout/fragment_data_request_p2" >
+        <action
+            android:id="@+id/action_dataRequestP2Fragment_to_combatFragment"
+            app:destination="@id/combatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="com.example.combate_pokemon.GameOverFragment"
+        android:label="fragment_game_over"
+        tools:layout="@layout/fragment_game_over" >
+        <action
+            android:id="@+id/action_gameOverFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.combate_pokemon.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_dataRequestP1Fragment"
+            app:destination="@id/dataRequestP1Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+</navigation>
